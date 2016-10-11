@@ -16,16 +16,21 @@ public:
 
 	// Print out the voters in alphabetical order by name,
 	// by calling Voters's operator<< for each voter.
+
+
 	void displayByName(std::ostream& out) const;
 
 	// Print out the voters from highest to lowest rating,
 	// by calling Voter's operator<< for each voter.
+	
+
 	void displayByIntensity(std::ostream& out) const;
 
 	// Insert a voter into both the names and intensities threads.
 	// The names thread should be in alphabetical order by name.
 	// The intensity thread should be in order from highest to
 	// lowest value.
+	
 	void insert(const Voter& voter);
 
 	// Return a const pointer to the voter instance it finds in
@@ -33,11 +38,16 @@ public:
 	// Because the pointer is declared const, there is no danger
 	// that find's caller will be able to use the returned pointer
 	// to change the instance of voter.
+	
+
 	Voter* const find(const char * const name) const;
 
 	// Remove the voter with the specified name from both the name
 	// thread and the intensity thread. Returns true if it found and
 	// removed the voter, false if it did not find the voter.
+	
+	
+
 	bool remove(const char * const name);
 
 private:

@@ -3,27 +3,30 @@
 
 using namespace std;
 
-const char	List::YOUR_NAME[]{"I. Forgot"};
+const char	List::YOUR_NAME[]{"Patrick Roanhouse"};
 
 List::List()
 {
 	// your code here, or in this constructor's initialization list
+
 }
 
 List::~List()
 {
 	// your code here
+
 }
 
-/*
-You will need to uncomment this constructor and write the code for it.
+/*You will need to uncomment this constructor and write the code for it.*/
 
 List::Node::Node(const Voter& voter)
 	// your initialization list here
 {
 	// your code here
+
+
 }
-*/
+
 
 void List::displayByName(ostream& out) const
 {
