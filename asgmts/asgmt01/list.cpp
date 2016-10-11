@@ -14,6 +14,7 @@ List::List()
 List::~List()
 {
 	// your code here
+	// testing mode again
 
 }
 
