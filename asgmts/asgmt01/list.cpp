@@ -8,13 +8,11 @@ const char	List::YOUR_NAME[]{"Patrick Roanhouse"};
 List::List()
 {
 	// your code here, or in this constructor's initialization list
-	// testing
 }
 
 List::~List()
 {
 	// your code here
-	// testing mode again
 
 }
 
