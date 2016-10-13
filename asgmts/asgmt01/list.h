@@ -17,6 +17,8 @@ public:
 	// Print out the voters in alphabetical order by name,
 	// by calling Voters's operator<< for each voter.
 
+	//test
+
 
 	void displayByName(std::ostream& out) const;
 
