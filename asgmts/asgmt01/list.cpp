@@ -39,7 +39,7 @@ void List::displayByIntensity(ostream& out) const
 
 void List::insert(const Voter& voter)
 {
-	// your code here
+	
 }
 
 Voter* const List::find(const char * const name) const
