@@ -47,6 +47,7 @@ void List::insert(const Voter& voter)
 Voter* const List::find(const char * const name) const
 {
 	// your code here, return the appropriate value
+	
 
 	return nullptr;
 }
