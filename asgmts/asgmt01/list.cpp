@@ -17,10 +17,18 @@ List::List()
 List::~List()
 {
 	// your code here
+		
+
 		Node * curr(nullptr);
 		Node * prev (nullptr);
 		curr = headByName;
 		while(curr != nullptr)
+		{
+			curr = curr->nextByName;
+			delete curr;
+		
+		}
+
 
 
 
@@ -28,11 +36,10 @@ List::~List()
 
 /*You will need to uncomment this constructor and write the code for it.*/
 
-List::Node::Node(const Voter& voter)
+List::Node::Node(const Voter& voter) : item{voter.getName(), voter.getParty(), voter.getIntensity()}
 	// your initialization list here
 {
 	// your code here
-	item{voter.getName(), voter.getParty(), voter.getIntensity()},
 	nextByName(nullptr);
 	nextByIntensity(nullptr);
 
@@ -83,11 +90,11 @@ void List::insert(const Voter& voter)
 	Node *curr;
 	Node *prev;
 
-	Node insertNode(new Node (voter));
+	Node newNode(new Node (voter));
 	if (headByName == NULL)
 	{
-		*headByName = insertNode;
-		*headByIntensity = insertNode;
+		*headByName = newNode;
+		*headByIntensity = newNode;
 	}
 	else if (headByName != NULL)
 	{	
@@ -98,14 +105,14 @@ void List::insert(const Voter& voter)
 		{
 			prev = curr;
 			curr = curr->nextByName;
-			insertNode->nextByName = curr;
-			prev->nextByName = insertNode;
+			newNode->nextByName = curr;
+			prev->nextByName = newNode;
 
 		}
 		else if (strcmp(voter.getName(), curr->item.getName()) < 0)
 		{
-			insertNode->nextByName == curr;
-			headByName = insertNode;
+			newNode->nextByName == curr;
+			headByName = newNode;
 		}
 		else if(strcmp(voter.getName(), curr->item.getName()) > 0)
 		{
@@ -116,8 +123,8 @@ void List::insert(const Voter& voter)
 
 				if(strcmp(voter.getName(), curr->item.getName()) <= 0)
 				{
-					insertNode->nextByName = curr;
-					prev->nextByName = insertNode;
+					newNode->nextByName = curr;
+					prev->nextByName = newNode;
 					break;
 				}
 			}
@@ -130,8 +137,8 @@ void List::insert(const Voter& voter)
 
 	if(voter.getIntensity() > curr->item.getIntensity())
 	{
-		insertNode->nextByIntensity = curr;
-		headByIntensity = insertNode;
+		newNode->nextByIntensity = curr;
+		headByIntensity = newNode;
 	}
 	else
 	{
@@ -141,13 +148,13 @@ void List::insert(const Voter& voter)
 			curr = curr->nextByIntensity;
 			if(voter.getIntensity < prev->item.getIntensity() && curr == nullptr)
 			{
-				insertNode->nextByIntensity == nullptr;
-				prev->nextByIntensity = insertNode;
+				newNode->nextByIntensity == nullptr;
+				prev->nextByIntensity = newNode;
 			}
 			else if (voter.getIntensity() < prev->item.getIntensity() && voter.getIntensity > curr->item.getIntensity())
 			{
-				insertNode->nextByIntensity = curr;
-				prev->nextByIntensity = insertNode;
+				newNode->nextByIntensity = curr;
+				prev->nextByIntensity = newNode;
 			}
 		}
 	}
