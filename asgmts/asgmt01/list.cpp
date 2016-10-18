@@ -146,12 +146,12 @@ void List::insert(const Voter& voter)
 		{
 			prev = curr;
 			curr = curr->nextByIntensity;
-			if(voter.getIntensity < prev->item.getIntensity() && curr == nullptr)
+			if(voter.getIntensity() < prev->item.getIntensity() && curr == nullptr)
 			{
 				newNode->nextByIntensity == nullptr;
 				prev->nextByIntensity = newNode;
 			}
-			else if (voter.getIntensity() < prev->item.getIntensity() && voter.getIntensity > curr->item.getIntensity())
+			else if (voter.getIntensity() < prev->item.getIntensity() && voter.getIntensity() > curr->item.getIntensity())
 			{
 				newNode->nextByIntensity = curr;
 				prev->nextByIntensity = newNode;
