@@ -9,19 +9,18 @@ using namespace std;
 Voter::Voter(const char * const name, const Party party, const int intensity)
 {
 	// your code here, or in this constructor's initialization list
-	this->party(party);
-	this->intensity(intensity);
+	party{party};
+	intensity{intensity};
 
 	this->name = new char[strlen(name)+1];
+	strcpy(this->name, name);
 
 }
 
 Voter::~Voter()
 {
 	// your code here
-	delete name;
-	delete intensity;
-	delete party;
+	delete [] name;
 
 
 }
@@ -29,8 +28,8 @@ Voter::~Voter()
 void Voter::displayColumnHeadings(ostream& out)
 {
 	// your code here
-	cout << setw(26) << left << "Name" << setw(17) << "Party" << "Intensity" << endl;
-	cout << setw(26) << left << "----" << setw(17) << "-----" << "---------" << endl;
+	cout << setw(26) << left << "Name" << setw(17) << "Party" << setw(9) << "Intensity" << endl;
+	cout << setw(26) << left << "----" << setw(17) << "-----" << setw(9) << "---------" << endl;
 
 
 }
