@@ -6,7 +6,7 @@
 using namespace std;
 
 
-Voter::Voter(const char * const name, const Party party, const int intensity)
+Voter::Voter(const char * const name, const Party party, const int intensity) :
 	party{party},
 	intensity{intensity}
 {
