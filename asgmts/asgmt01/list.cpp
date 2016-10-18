@@ -8,8 +8,8 @@ const char	List::YOUR_NAME[]{"Patrick Roanhouse"};
 List::List()
 {
 	// your code here, or in this constructor's initialization list
-	headByName = nullptr;
-	headByIntensity = nullptr;
+	headByName = NULL;
+	headByIntensity = NULL;
 
 	
 }
@@ -19,8 +19,8 @@ List::~List()
 	// your code here
 		
 
-		Node * curr{nullptr}
-		Node * prev{nullptr};
+		Node * curr(nullptr);
+		Node * prev (nullptr);
 		curr = headByName;
 		while(curr != nullptr)
 		{
@@ -40,8 +40,8 @@ List::Node::Node(const Voter& voter) : item{voter.getName(), voter.getParty(), v
 	// your initialization list here
 {
 	// your code here
-	nextByName{nullptr};
-	nextByIntensity{nullptr};
+	nextByName(nullptr);
+	nextByIntensity(nullptr);
 
 }
 
