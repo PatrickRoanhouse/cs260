@@ -14,9 +14,6 @@ Voter::Voter(const char * const name, const Party party, const int intensity)
 
 	this->name = new char[strlen(name)+1];
 
-	// test 
-	cout << name << " " << party << " " << intensity;
-
 }
 
 Voter::~Voter()
@@ -30,7 +27,8 @@ Voter::~Voter()
 void Voter::displayColumnHeadings(ostream& out)
 {
 	// your code here
-
+	cout << setw(26) << left << "Name" << setw(17) << "Party" << "Intensity" << endl;
+	cout << setw(26) << left << "----" << setw(17) << "-----" << "---------" << endl;
 
 
 }
