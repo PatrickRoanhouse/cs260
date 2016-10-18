@@ -20,7 +20,7 @@ List::~List()
 		
 
 		Node * curr(nullptr);
-		Node * prev (nullptr);
+		Node * prev(nullptr);
 		curr = headByName;
 		while(curr != nullptr)
 		{
