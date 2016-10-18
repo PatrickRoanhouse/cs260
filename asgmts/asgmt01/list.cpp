@@ -47,7 +47,7 @@ void List::displayByIntensity(ostream& out) const
 
 void List::insert(const Voter& voter)
 {
-	Node *cur;
+	Node *curr;
 	Node *next;
 
 	Node insertNode = new Node (voter);
@@ -71,7 +71,7 @@ void List::insert(const Voter& voter)
 	{
 		cur = headByName;
 		next = headByName->nextByName;
-		while ((0 <= strcmp(insertNode->item.name , cur->item.name)) && (0 < strcmp(insertNode->item.name , next->item.name)) && (nextByName!=NULL))
+		while ((0 <= strcmp(insertNode->item.name , curr->item.name)) && (0 <= strcmp(insertNode->item.name , next->item.name)) && (nextByName!=NULL))
 		{
 			cur = next;
 			next = nextByName;
@@ -98,7 +98,7 @@ Voter* const List::find(const char * const name) const
 bool List::remove(const char * const name)
 {
 	// your code here, return the appropriate value
-	find()
+	
 
 
 	return false;

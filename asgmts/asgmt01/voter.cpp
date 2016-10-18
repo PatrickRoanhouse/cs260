@@ -19,7 +19,9 @@ Voter::Voter(const char * const name, const Party party, const int intensity)
 Voter::~Voter()
 {
 	// your code here
-	delete name [];
+	delete name;
+	delete intensity;
+	delete intensity;
 
 
 }
