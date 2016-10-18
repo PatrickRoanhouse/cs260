@@ -9,7 +9,7 @@ using namespace std;
 Voter::Voter(const char * const name, const Party party, const int intensity)
 {
 	// your code here, or in this constructor's initialization list
-	this->Party(party);
+	this->party(party);
 	this->intensity(intensity);
 
 	this->name = new char[strlen(name)+1];
@@ -21,7 +21,7 @@ Voter::~Voter()
 	// your code here
 	delete name;
 	delete intensity;
-	delete intensity;
+	delete party;
 
 
 }
