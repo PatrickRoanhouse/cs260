@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const char	List::YOUR_NAME[]{"Bowen Johnson"};
+const char	List::YOUR_NAME[]{"Patrick Roanhouse"};
 
 List::List()
 {
