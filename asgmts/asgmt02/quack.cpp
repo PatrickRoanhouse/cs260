@@ -5,7 +5,7 @@
 using namespace std;
 
 // change the value of this variable to be your own name instead of "I. Forgot"
-const char	Quack::YOUR_NAME[]{"I. Forgot"};
+const char	Quack::YOUR_NAME[]{"Patrick Roanhouse"};
 
 // change the value of this variable to true if you're doing the Premium version
 const bool	Quack::PREMIUM_VERSION{false};
