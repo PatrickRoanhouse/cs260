@@ -8,7 +8,7 @@ using namespace std;
 const char	Quack::YOUR_NAME[]{"Patrick Roanhouse"};
 
 // change the value of this variable to true if you're doing the Premium version
-const bool	Quack::PREMIUM_VERSION{false};
+const bool	Quack::PREMIUM_VERSION{true};
 
 Quack::Quack(int capacity, int growBy) :
 	// replace these initializations with the ones you actually need
