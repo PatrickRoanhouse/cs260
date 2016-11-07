@@ -56,7 +56,12 @@ public:
 private:
 	char	*items;						// pointer to storage for circular array,
 										// each item in the array is a char
-	int		capacity;					// # of slots in array
+	int		nItems;						// # of items currently stored in array
+	int		capacity;					// # of slot in array
+	int		growBy;						// # of slots array will grow by
+
+	int		queueFront;
+	int		queueBack;
 
 public:
 	friend std::ostream& operator<<(std::ostream& out, Quack *q);
