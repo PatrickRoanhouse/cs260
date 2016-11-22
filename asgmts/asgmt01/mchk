@@ -1,0 +1,11 @@
+#! /bin/bash
+
+if [ $# -eq 0 ];then
+	echo 'call with name of executable file'
+	exit
+fi
+
+# Thanks to Fall 2016 student Zach Grow for
+# suggesting use of the --track-origins=yes flag.
+
+valgrind -v --track-origins=yes --tool=memcheck --leak-check=full $1
