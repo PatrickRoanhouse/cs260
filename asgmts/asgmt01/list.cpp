@@ -16,12 +16,15 @@ List::~List()
 {
 
 	// your code here
-	Node * curr(nullptr);
+	Node * curr(headByName);
+	Node * temp;
+
 	//Node * prev(nullptr);
 	while (curr != nullptr)
 	{
+		temp = curr;
 		curr = curr->nextByName;
-		delete curr;
+		delete temp;
 	}
 
 
